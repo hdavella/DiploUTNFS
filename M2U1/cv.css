@@ -10,14 +10,29 @@ h3{
 h5{
     color: rgb(255, 38, 0);
 }
-#parrafos{
+#parrafosol{
     color:rgb(24, 95, 46);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
     font-style: italic;
     font: bold;
 }
-div{
+.parrafosul{
+    color:rgb(24, 95, 46);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
+    font: bold;
+}
+.columnas{
+    column-count: 2;
+    column-gap: 20px;
+    margin: 2%;
+    width: auto;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #131212;
+}
+.imagen{
     padding: 1%;
     background-color: rgb(160, 16, 16);
     margin: 2%;
@@ -26,3 +41,4 @@ div{
     border-radius: 10px 10px 10px 10px;
     border: 2px solid #ff6550;
 }
+
