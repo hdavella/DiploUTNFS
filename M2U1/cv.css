@@ -5,7 +5,7 @@ h3{
     background-color: beige;
     color:brown;
     text-shadow: 1px 3px 20px rgba(0,0,0,1);
-    border-radius: 5px 10px 10px 5px;
+    border-radius: 5px 10px 10px 5px;  
 }
 h5{
     color: rgb(255, 38, 0);
@@ -17,18 +17,14 @@ h5{
     font-style: italic;
     font: bold;
 }
-.parrafosul{
+#parrafosul{
     color:rgb(24, 95, 46);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
     font-style: italic;
     font: bold;
 }
-.columnas{
-    column-count: 2;
-    column-gap: 20px;
-    margin: 2%;
-    width: auto;
+#columnas{
     border-radius: 10px 10px 10px 10px;
     border: 2px solid #131212;
 }
