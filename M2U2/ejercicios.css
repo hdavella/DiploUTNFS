@@ -1,0 +1,52 @@
+.marco{
+    display: flex;
+    background-color: rgb(54, 29, 29);
+    flex-direction: column;
+}
+
+.ejercicio1{
+    display: flex;
+    background-color: rgb(233, 37, 37);
+    margin: 10px;
+    flex-flow: column wrap;
+    align-content: flex-end;    
+}
+
+.ejercicio2{
+    display: flex;
+    background-color: rgb(112, 165, 42);
+    margin: 10px;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.ejercicio3{
+    display: flex;
+    background-color: rgb(255, 238, 0);
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.box1{
+    display: flex;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.box2{
+    display: flex;
+    background-color: rgb(17, 0, 255);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.box3{
+    display: flex;
+    background-color: rgb(43, 255, 0);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
