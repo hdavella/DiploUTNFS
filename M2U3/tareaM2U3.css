@@ -1,0 +1,4 @@
+img:hover{
+    transition: transform 1s;
+    transform: translateX(450px);
+}
