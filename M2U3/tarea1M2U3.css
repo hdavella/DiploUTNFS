@@ -1,0 +1,9 @@
+.columna{
+    display: flex;
+    background-color: rgb(158, 233, 37);
+    margin: 20px;
+    border-color: rgb(15, 15, 15);
+    border: 10px;
+    flex-flow: column;
+    align-content: center;
+}

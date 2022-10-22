@@ -1,0 +1,8 @@
+.columna{
+    display: flex;
+    background-color: rgb(158, 233, 37);
+    margin: 20px;
+    border-color: red;
+    flex-flow: row;
+    align-content: center;
+}
