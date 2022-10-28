@@ -8,6 +8,16 @@ header{
     background-color: #2e64a1;
     padding: 16px 0; /*1rem 0*/
 }
+header h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
 
 nav{
     background-color: #6da9ed;
@@ -21,4 +31,14 @@ nav ul{
 }
 nav ul li{
     flex-grow: 1;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+nav ul li a:hover{
+    background-color: rgba(0,0,0,0.3);
 }
