@@ -50,6 +50,10 @@ nav ul li a.activo{
     max-width: 960px;
     margin: 0 auto;
 }
+.imgcentro{
+    display: flex;
+    justify-content: center;
+}
 
 footer{
     background-color: #ccc;
@@ -58,4 +62,22 @@ footer{
     text-align: center;
     padding: 5px 0; /*3rem 0 */
     margin-top: 20px;
+}
+
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.testimonios{
+    width: 25%;
+}
+.columnas{
+    display: flex;
+    justify-content: space-between;
 }
