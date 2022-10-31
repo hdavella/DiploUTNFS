@@ -81,3 +81,22 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+.bienvenidos p{
+    font-size: 20px;
+}
+.testimonio{
+    background-color: #ccc;
+    padding: 16px;
+}
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+}
+.testimonio .autor{
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 12px 0;
+}
