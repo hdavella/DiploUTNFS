@@ -69,6 +69,7 @@ h2{
     font-weight: 400;
 }
 
+/* Home */
 .bienvenidos{
     width: 75%;
     padding-right: 10px;
@@ -101,6 +102,7 @@ h2{
     margin: 12px 0;
 }
 
+/*Nosotros*/
 .historia p{
     font-size: 12px;
 }
@@ -140,6 +142,7 @@ h2{
     font-size: 10px;
 }
 
+/* Servicio */
 .servicio{
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -166,4 +169,19 @@ h2{
 }
 .servicio:nth-child(even){
     flex-direction: row-reverse;
+}
+
+/* Galeria */
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.galeria img{
+    width: 18%;
+    border: 1px solid #ddd;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 2%;
 }
