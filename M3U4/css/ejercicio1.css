@@ -1,0 +1,42 @@
+body{
+    background-color: brown;
+}
+.marco{
+    display: flex;
+    background-color: brown;
+    flex-direction:  column; /* cambio la direccion de las cajas columna o fila */
+}
+.ejercicio1{
+    display: flex;
+    background-color: rgb(233, 37, 37);
+    margin: 10px;
+    
+    align-content:center;     
+}
+.box1{
+    display: flex;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.box2{
+    display: flex;
+    background-color: rgb(17, 0, 255);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.box3{
+    display: flex;
+    background-color: rgb(43, 255, 0);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
