@@ -8,6 +8,11 @@ import Footer from "./components/layout/Footer";
 
 
 import HomePage from "./pages/HomePage";
+//import HomePage from "./pages/GaleriaPage";
+//import HomePage from "./pages/NosotrosPage";
+//import HomePage from "./pages/Novedadesge";
+//import HomePage from "./pages/ServiciosPage";
+import ContactoPage from "./pages/ContactoPage";
 
 function App() {
   return (
@@ -18,6 +23,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="contacto" element={<ContactoPage />} />
         </Routes>
       </BrowserRouter>
 
