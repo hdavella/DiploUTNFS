@@ -27,7 +27,7 @@ const ContactoPage = (props) => {
                     </p>
                 </form>
             </div>
-            <div class="datos">
+            <div className="datos">
                 <h2>Otras vías de comunciación</h2>
                 <p>Otros datos de contacto</p>
                 <ul>
@@ -38,7 +38,6 @@ const ContactoPage = (props) => {
                 </ul>
             </div>
         </main>
-
     );
 }
 export default ContactoPage;

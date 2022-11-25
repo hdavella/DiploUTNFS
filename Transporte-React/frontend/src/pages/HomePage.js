@@ -9,10 +9,7 @@ const HomePage = (props) => {
                 <section className="bienvenidos">
                     <h2>Bienvenidos</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                        reprehenderit laborum alias, maxime iure recusandae perspiciatis! Ea
-                        est numquam assumenda veniam sunt aspernatur nesciunt odit animi.
-                        Beatae ducimus a debitis!
+                        Prueba
                     </p>
                 </section>
                 <section className="testimonios">
