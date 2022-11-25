@@ -27,7 +27,7 @@ export default function App() {
           <Route path="Galeria" element={<GaleriaPage />} ></Route>
           <Route path="Nosotros" element={<NosotrosPage />} ></Route>
           <Route path="Novedades" element={<NovedadesPage />} ></Route>
-          <Route path="Servivicios" element={<ServiciosPage />} ></Route>
+          <Route path="Servicios" element={<ServiciosPage />} ></Route>
 
         </Routes>
       </BrowserRouter>
