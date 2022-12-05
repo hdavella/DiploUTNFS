@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/serviciosPage.css";
 
 const ServiciosPage = (props) => {
     return(
