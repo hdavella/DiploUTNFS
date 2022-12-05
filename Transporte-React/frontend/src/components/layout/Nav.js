@@ -7,12 +7,8 @@ const Nav = (props) => {
       <div>
         <ul>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "activo" : undefined)} 
-            >Home</NavLink>{" "}
+            <NavLink to="/" className={({ isActive }) => (isActive ? "activo" : undefined)}>Home</NavLink>{" "}
           </li>
-
           <li>
             <NavLink to="/Galeria" className={({ isActive }) => (isActive ? "activo" : undefined)}>Galeria</NavLink>
           </li>
