@@ -3,7 +3,14 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var conocido = Boolean(req.session.nombre);
+  res.render('index', {
+    title:'Sesiones en express.js - Tarea M4U4',
+    conocido:conocido,
+    nombre:req.session.nombre,
+    var1: 'prueba de variables'
+  });
+ 
 });
 
 module.exports = router;
