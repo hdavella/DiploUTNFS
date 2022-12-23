@@ -27,23 +27,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
-
-//app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 // código generado por hdavella
 app.use('/', indexRouter);
-
-app.post('/ingresar', function(req,res){
-  if(req.body.nombre){
-    req.session.nombre = req.body.nombre
-  }
-  res.redirect('/');
-});
-
-app.get('/salir', function(req,res){
-  req.session.destroy();
-  res.redirect('/');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

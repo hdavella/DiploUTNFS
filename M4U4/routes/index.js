@@ -13,4 +13,16 @@ router.get('/', function(req, res, next) {
  
 });
 
+router.get('/salir', function(req,res){
+  req.session.destroy();
+  res.redirect('/');
+});
+
+router.post('/ingresar', function(req,res){
+  if(req.body.nombre){
+    req.session.nombre = req.body.nombre
+  }
+  res.redirect('/');
+});
+
 module.exports = router;
