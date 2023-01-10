@@ -6,8 +6,12 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 // generado por hdavella
+var session = require('express-session');
 var loginRouter = require('./routes/admin/login');
+//para lectura archivo .env
+require('dotenv').config();
 
 var app = express();
 
@@ -23,8 +27,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
+
 // generado por hdavella
 app.use('/admin/login', loginRouter);
+
+//variables de sesión
+app.use(session({
+  secret:"todo debe hacerse lo mas simple posible. Pero no mas sencillo",
+  resave: false,
+  saveUninitialized: true
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
