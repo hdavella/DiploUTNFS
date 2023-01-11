@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 // generado por hdavella
 var session = require('express-session');
 var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
 //para lectura archivo .env
 require('dotenv').config();
 
@@ -30,6 +31,7 @@ app.use('/', indexRouter);
 
 // generado por hdavella
 app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', adminRouter);
 
 //variables de sesión
 app.use(session({
