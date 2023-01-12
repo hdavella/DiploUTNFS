@@ -46,7 +46,6 @@ secured = async (req, res, next) => {
 }
 
 app.use('/', indexRouter);
-
 // generado por hdavella
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
