@@ -5,15 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 // generado por hdavella
 var session = require('express-session');
 var loginRouter = require('./routes/admin/login');
 var novedadesRouter = require('./routes/admin/novedades');
-var advertenciaRouter = require('./routes/admin/advertencia')
-//para lectura archivo .env
-require('dotenv').config();
+var advertenciaRouter = require('./routes/admin/advertencia');
+var logoutRouter = require('./routes/admin/logout');
+
+require('dotenv').config(); 
 
 var app = express();
 // view engine setup
@@ -46,12 +46,12 @@ secured = async (req, res, next) => {
 }
 
 app.use('/', indexRouter);
-//app.use('/users', usersRouter);
 
 // generado por hdavella
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
 app.use('/admin/advertencia', advertenciaRouter);
+app.use('/admin/logout', logoutRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
