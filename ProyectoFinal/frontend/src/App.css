@@ -51,7 +51,7 @@ nav ul li a.activo{
 
 
 .holder{
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
 }
 .imgcentro{
@@ -106,6 +106,8 @@ h2{
   display: block;
   margin: 12px 0;
 }
+
+
 /* .App {
   text-align: center;
 }
