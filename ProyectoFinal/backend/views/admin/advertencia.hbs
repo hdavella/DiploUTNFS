@@ -1,0 +1,26 @@
+{{!--
+<script>setTimeout(function () { window.location = '/'; }, 3000);</script> --}}
+
+<head>
+    <script>
+        let redirect_Page = (ele) => {
+            ele.disabled = true;
+            let iCnt = 3;
+            let iTimerId = setInterval(function () {
+                document.getElementById('msg').innerHTML = 'Será redireccionado en ' + iCnt + ' segundos';
+
+                iCnt--;
+
+                if (iCnt === 0) {
+                    window.location.href = '/';
+                    clearInterval(iTimerId);
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+
+<body onload="redirect_Page(this)">
+    <p>Debe loguearse primero</p>
+    <p id='msg'></p>
+</body>

@@ -2,9 +2,10 @@ import React from 'react';
 
 const HomePage = (props) => {
     return (
+        
 
         <main className="holder">
-            <div className="imgcentro"><img src="img/logo.jpg" alt="chip" /></div>
+            <div className="imgcentro"><img src="img/logo.jpg" width="350" alt="chip" /></div>
             <div className="columnas">
                 <section className="bienvenidos">
                     <h2>Bienvenidos</h2>
