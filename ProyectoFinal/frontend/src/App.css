@@ -3,14 +3,7 @@ body{
   font-size: 16px;
   line-height: 20px;
 }
-.holder{
-  max-width: 960px;
-  margin: 0 auto;
-}
-h2{
-  color: #2e64a1;
-  font-weight: 400;
-}
+
 header{
   background-color: #2e64a1;
   padding: 16px 0; /*1rem 0*/
@@ -27,33 +20,40 @@ header h1{
 }
 
 nav{
-  background-color: #6da9ed;
+  background-color: #004225;
   margin-bottom: 20px;
 }
+
 nav ul{
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display:flex;
+  justify-content:flex-end;
 }
-nav ul li{
+/* nav ul li{
   flex-grow: 1;
-}
+} */
 nav ul li a{
   color: white;
-  text-decoration: none;
+  text-decoration:solid;
   padding: 3px 6px;
-  display: block;
+  display:block;
   text-align: center;
 }
 nav ul li a:hover{
   background-color: rgba(0,0,0,0.3);
+  text-transform: uppercase;
 }
 nav ul li a.activo{
-  background-color: #4c76a5;
+  background-color: #00A693;
 }
 
 
+.holder{
+  max-width: 960px;
+  margin: 0 auto;
+}
 .imgcentro{
   display: flex;
   justify-content: center;
@@ -66,6 +66,45 @@ footer{
   text-align: center;
   padding: 5px 0; /*3rem 0 */
   margin-top: 20px;
+}
+
+h2{
+  color: #2e64a1;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Home */
+.bienvenidos{
+  width: 75%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.testimonios{
+  width: 25%;
+}
+.columnas{
+  display: flex;
+  justify-content: space-between;
+}
+.bienvenidos p{
+  font-size: 20px;
+}
+.testimonio{
+  background-color: #ccc;
+  padding: 16px;
+}
+.testimonio .cita{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  display: block;
+}
+.testimonio .autor{
+  font-size: 10px;
+  text-align: center;
+  display: block;
+  margin: 12px 0;
 }
 /* .App {
   text-align: center;

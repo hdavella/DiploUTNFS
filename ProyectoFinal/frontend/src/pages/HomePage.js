@@ -9,7 +9,10 @@ const HomePage = (props) => {
                 <section className="bienvenidos">
                     <h2>Bienvenidos</h2>
                     <p>
-                        Prueba
+                        Somos una empreza especializada en reparación y reprogramación de modulos electrónicos del automotor
+                    </p>
+                    <p>
+                        Realizamos banqueo de módulos del automotor para verificar el correcto funcionamiento ante una repración o ante falla
                     </p>
                 </section>
                 <section className="testimonios">
