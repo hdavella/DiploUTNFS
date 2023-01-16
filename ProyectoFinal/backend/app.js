@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 // generado por hdavella
 var session = require('express-session');
 var loginRouter = require('./routes/admin/login');
-var novedadesRouter = require('./routes/admin/novedades');
+var trabajosRouter = require('./routes/admin/trabajos');
 var advertenciaRouter = require('./routes/admin/advertencia');
 var logoutRouter = require('./routes/admin/logout');
 
@@ -48,7 +48,7 @@ secured = async (req, res, next) => {
 app.use('/', indexRouter);
 // generado por hdavella
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', secured, novedadesRouter);
+app.use('/admin/trabajos', secured, trabajosRouter);
 app.use('/admin/advertencia', advertenciaRouter);
 app.use('/admin/logout', logoutRouter);
 
