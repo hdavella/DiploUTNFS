@@ -20,8 +20,9 @@ router.get('/agregar', (req, res, next) => {
 });
 router.post('/agregar', async (req, res, next)=>{
     try{
-        if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.descripcion != ""){
+        if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.descripcion != "" && req.body.fecha != ""){
             await trabajosModel.altaTrabajo(req.body);
+            console.log(req.body);
             res.redirect('/admin/trabajos')
         } else {
             res.render('admin/agregar', {
