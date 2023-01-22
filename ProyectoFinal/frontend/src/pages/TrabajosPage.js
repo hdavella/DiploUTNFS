@@ -1,7 +1,7 @@
 import React from 'react';
-import "../styles/serviciosPage.css";
+import "../styles/trabajosPage.css";
 
-const ServiciosPage = (props) => {
+const TrabajosPage = (props) => {
     return(
         <main className="holder">
       <h2>Servicios</h2>
@@ -55,4 +55,4 @@ const ServiciosPage = (props) => {
     </main>
     );
 }
-export default ServiciosPage;
+export default TrabajosPage;

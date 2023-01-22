@@ -7,7 +7,7 @@ import Footer from "./components/layout/Footer";
 
 import HomePage from "./pages/HomePage";
 import ContactoPage from "./pages/ContactoPage";
-import ServiciosPage from "./pages/ServiciosPage";
+import TrabajosPage from "./pages/TrabajosPage";
 import LaEmpresaPage from "./pages/LaEmpresaPage";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} ></Route>
           <Route path="Contacto" element={<ContactoPage />} ></Route>
-          <Route path="Servicios" element={<ServiciosPage />} ></Route>
+          <Route path="Trabajos" element={<TrabajosPage />} ></Route>
           <Route path="LaEmpresa" element={<LaEmpresaPage />} ></Route>
         </Routes>
       </BrowserRouter>
