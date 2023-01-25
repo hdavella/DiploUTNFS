@@ -19,6 +19,13 @@ router.get('/agregar', (req, res, next) => {
     });
 });
 
+router.get('/eliminarconfirm:id', (req, res, next) => {
+    var id = req.params.id
+    res.render('admin/eliminarconfirm:id', {
+        layout:'admin/layout'
+    });
+});
+
 router.post('/agregar', async (req, res, next)=>{
     try{
         if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.descripcion != ""){
