@@ -19,5 +19,15 @@ async function altaTrabajo(obj){
     }
 
 }
+async function deleteTrabajoById(id){
+    try{
+        var query = "delete from trabajos where id = ?";
+        var rows = await pool.query(query, [id]);
+        return rows;
+    } catch (error) {
+        console.log(error);
+    }
 
-module.exports={getTrabajos, altaTrabajo}
+}
+
+module.exports={getTrabajos, altaTrabajo, deleteTrabajoById}

@@ -19,11 +19,25 @@ router.get('/agregar', (req, res, next) => {
     });
 });
 
-router.get('/eliminarconfirm:id', (req, res, next) => {
+router.get('/eliminarconfirm/:id', (req, res, next) => {
     var id = req.params.id
-    res.render('admin/eliminarconfirm:id', {
-        layout:'admin/layout'
+    //console.log(id);
+    res.render('admin/eliminarconfirm', {
+        layout:'admin/layout',
+        id
     });
+});
+
+router.post('/eliminar', async (req, res, next) =>{
+    try{
+        var id=req.body.idconfirmar;
+        //console.log(`trabajo a borrar ${id}`)
+        await trabajosModel.deleteTrabajoById(id);
+        res.redirect('/admin/trabajos');
+
+    }catch{
+        console.log(error);
+    }
 });
 
 router.post('/agregar', async (req, res, next)=>{
