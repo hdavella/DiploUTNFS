@@ -28,6 +28,17 @@ router.get('/eliminarconfirm/:id', (req, res, next) => {
     });
 });
 
+router.get('/modificar/:id', async (req, res, next) => {
+    let id = req.params.id;
+    let trabajo = await trabajosModel.selectTrabajoById(id);
+    res.render('admin/modificar',
+        {
+            layout: 'admin/layout',
+            trabajo
+        }
+    );
+});
+
 router.post('/eliminar', async (req, res, next) =>{
     try{
         var id=req.body.idconfirmar;
@@ -59,6 +70,25 @@ router.post('/agregar', async (req, res, next)=>{
             layout: 'admin/layout',
             error:true,
             message: 'No se cargo el trabajo'
+        })
+    }
+});
+
+router.post('/modificar', async (req, res, next)=>{
+    try{
+        let obj = {
+            titulo:req.body.titulo,
+            subtitulo:req.body.subtitulo,
+            descripcion:req.body.descripcion
+        }
+        await trabajosModel.updateTrabajoById(obj, req.body.id);
+        res.redirect('/admin/trabajos');
+    }catch{
+        console.log(error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error:true,
+            message: 'No se modificó el trabajo'
         })
     }
 })
