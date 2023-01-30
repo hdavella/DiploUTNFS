@@ -7,8 +7,24 @@ var uploader = util.promisify(cloudinary.uploader.upload);
 
 router.get('/', async (req, res, next) =>{
 
-    try{
         var trabajos = await trabajosModel.getTrabajos();
+
+        trabajos = trabajos.map( (trabajo)=>{
+            if(trabajo.img_id){
+                const imagen = cloudinary.image(trabajo.img_id,{
+                    width:50,
+                    height:50,
+                    crop:"fill"
+                });
+                return{
+                    ...trabajo, imagen
+                }
+            }else{
+                return{
+                    ...trabajo, imagen:""
+                }
+            }
+        });
         res.render('admin/trabajos',
             {
                 layout: 'admin/layout',
@@ -16,9 +32,7 @@ router.get('/', async (req, res, next) =>{
                 trabajos
             }
         );
-    }catch{
-        console.log(error);
-    }
+    
 });
 
 router.get('/agregar', (req, res, next) => {
