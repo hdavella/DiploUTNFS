@@ -7,14 +7,13 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 
 // generado por hdavella
+require('dotenv').config(); 
 var session = require('express-session');
 var fileUpload = require('express-fileupload');
 var loginRouter = require('./routes/admin/login');
 var trabajosRouter = require('./routes/admin/trabajos');
 var advertenciaRouter = require('./routes/admin/advertencia');
 var logoutRouter = require('./routes/admin/logout');
-
-require('dotenv').config(); 
 
 var app = express();
 // view engine setup
@@ -25,6 +24,7 @@ app.use(fileUpload({
   useTempFiles:true,
   tempFileDir:'/tmp/'
 }));
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -1,16 +1,24 @@
 var express = require('express');
 var router = express.Router();
-var trabajosModel = require('../../models/trabajosModel')
+var trabajosModel = require('../../models/trabajosModel');
+var util = require('util');
+var cloudinary = require('cloudinary').v2;
+var uploader = util.promisify(cloudinary.uploader.upload);
 
 router.get('/', async (req, res, next) =>{
-    var trabajos = await trabajosModel.getTrabajos();
-    res.render('admin/trabajos',
-        {
-            layout: 'admin/layout',
-            nombre: req.session.nombre,
-            trabajos
-        }
-    );
+
+    try{
+        var trabajos = await trabajosModel.getTrabajos();
+        res.render('admin/trabajos',
+            {
+                layout: 'admin/layout',
+                nombre: req.session.nombre,
+                trabajos
+            }
+        );
+    }catch{
+        console.log(error);
+    }
 });
 
 router.get('/agregar', (req, res, next) => {
@@ -19,6 +27,7 @@ router.get('/agregar', (req, res, next) => {
     });
 });
 
+//pido confirmar si realmente se quiere eliminar el trabajo
 router.get('/eliminarconfirm/:id', (req, res, next) => {
     var id = req.params.id
     //console.log(id);
@@ -29,14 +38,19 @@ router.get('/eliminarconfirm/:id', (req, res, next) => {
 });
 
 router.get('/modificar/:id', async (req, res, next) => {
-    let id = req.params.id;
-    let trabajo = await trabajosModel.selectTrabajoById(id);
-    res.render('admin/modificar',
-        {
-            layout: 'admin/layout',
-            trabajo
-        }
-    );
+
+    try{
+        let id = req.params.id;
+        let trabajo = await trabajosModel.selectTrabajoById(id);
+        res.render('admin/modificar',
+            {
+                layout: 'admin/layout',
+                trabajo
+            }
+        );
+    }catch{
+        console.log(error);
+    }
 });
 
 router.post('/eliminar', async (req, res, next) =>{
@@ -53,16 +67,25 @@ router.post('/eliminar', async (req, res, next) =>{
 
 router.post('/agregar', async (req, res, next)=>{
     try{
+        let img_id = '';
+        if(req.files && Object.keys(req.files).length > 0){
+            imagen = req.files.imagen;
+            img_id = (await uploader(imagen.tempFilePath)).public_id;
+        }
+        // Se requieren los campos para que sean todos completos
         if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.descripcion != ""){
-            await trabajosModel.altaTrabajo(req.body);
-            console.log(req.body);
-            res.redirect('/admin/trabajos')
+            await trabajosModel.altaTrabajo({...req.body, img_id});
+            //console.log(req.body);
+            res.redirect('/admin/trabajos');
         } else {
             res.render('admin/agregar', {
                 layout: 'admin/layout',
                 error:true,
                 message: 'Todos los campos son requeridos'
-            })
+            });
+        }
+        if(req.body.cancelar){
+            res.redirect('/admin/trabajos');
         }
     }catch{
         console.log(error);
@@ -82,6 +105,7 @@ router.post('/modificar', async (req, res, next)=>{
             descripcion:req.body.descripcion
         }
         await trabajosModel.updateTrabajoById(obj, req.body.id);
+        //una vez modificada la base, vuelvo a listar los trabajos
         res.redirect('/admin/trabajos');
     }catch{
         console.log(error);
