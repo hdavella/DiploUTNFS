@@ -36,7 +36,7 @@ router.get('/', async (req, res, next) =>{
     
 });
 
-router.get('/agregar', (req, res, next) => {
+router.get('/agregar', (req, res, next) => {    
     res.render('admin/agregar', {
         layout:'admin/layout'
     });
@@ -91,7 +91,9 @@ router.post('/agregar', async (req, res, next)=>{
         if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.descripcion != ""){
             await trabajosModel.altaTrabajo({...req.body, img_id});
             //console.log(req.body);
-            res.redirect('/admin/trabajos');
+            
+        
+            res.redirect('/admin/altaok');
         } else {
             res.render('admin/agregar', {
                 layout: 'admin/layout',
