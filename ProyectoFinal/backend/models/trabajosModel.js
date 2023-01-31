@@ -35,7 +35,7 @@ async function selectTrabajoById(id){
 }
 async function updateTrabajoById(obj,id){
     try{
-        var query = "update from trabajos set ? where id = ?";
+        var query = "update trabajos set ? where id = ?";
         var rows = await pool.query(query, [obj,id]);
         return rows;
     } catch (error) {

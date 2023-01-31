@@ -4,6 +4,7 @@ var trabajosModel = require('../../models/trabajosModel');
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
 var uploader = util.promisify(cloudinary.uploader.upload);
+var destroy = util.promisify(cloudinary.uploader.destroy);
 
 router.get('/', async (req, res, next) =>{
 
@@ -113,10 +114,26 @@ router.post('/agregar', async (req, res, next)=>{
 
 router.post('/modificar', async (req, res, next)=>{
     try{
+        let img_id = req.body.img_original;
+        let img_borrar_vieja = false;
+        if(req.body.img_delete === "1"){
+            img_id = "";
+            img_borrar_vieja = true;
+        }else{
+            if(req.files && Object.keys(req.files).length > 0 ){
+                imagen = req.files.imagen;
+                img_id = (await uploader(imagen.tempFilePath) ).public_id;
+                img_borrar_vieja = true;
+            }
+        }
+        if(img_borrar_vieja && req.body.img_original){
+            await (destroy(req.body.img_original));
+        }
         let obj = {
             titulo:req.body.titulo,
             subtitulo:req.body.subtitulo,
-            descripcion:req.body.descripcion
+            descripcion:req.body.descripcion,
+            img_id
         }
         await trabajosModel.updateTrabajoById(obj, req.body.id);
         //una vez modificada la base, vuelvo a listar los trabajos
