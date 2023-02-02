@@ -71,6 +71,10 @@ router.get('/modificar/:id', async (req, res, next) => {
 router.post('/eliminar', async (req, res, next) =>{
     try{
         var id=req.body.idconfirmar;
+        let trabajo = await trabajosModel.selectTrabajoById(id);
+        if (trabajo.img_id){
+            await (destroy(trabajo.img_id));
+        }
         //console.log(`trabajo a borrar ${id}`)
         await trabajosModel.deleteTrabajoById(id);
         res.redirect('/admin/trabajos');
