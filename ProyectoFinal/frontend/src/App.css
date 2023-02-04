@@ -84,8 +84,10 @@ h2{
   width: 25%;
 }
 .columnas{
-  display: flex;
-  justify-content: space-between;
+  margin-top: 20px;
+  display:flexbox;
+
+  justify-content:flex-start;
 }
 .bienvenidos p{
   font-size: 20px;

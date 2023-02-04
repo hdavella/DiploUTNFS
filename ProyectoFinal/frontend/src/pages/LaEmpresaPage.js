@@ -7,15 +7,16 @@ const NosotrosPage = (props) => {
     <div className="historia">
       <h2>Historia</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-        reprehenderit laborum alias, maxime iure recusandae perspiciatis! Ea
-        est numquam assumenda veniam sunt aspernatur nesciunt odit animi.
-        Beatae ducimus a debitis!
+        Somos una empresa familiar que desde 1983 nos dedicamos a la mecánica, en los comienzos dedicados a
+        la mecánica convencional pero con el avance de la electrónica en los automovíbiles nos inclinamos por este
+        maravilloso universo.
+        Con el tiempo adquirimos experiencia en los diferentes módulos, primero de inyección y luego con el resto
+        hasta conformar toda la electrónica que se encuentra hoy en los automóviles modernos.
       </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Soluta dolorem quisquam nulla fugiat cupiditate eveniet,
-        apiente tenetur delectus ea tempore natus quod vitae libero, iusto ipsum impedit.
-        Exercitationem, maiores excepturi.
+      <p>Actualmente contamos con un moderno laboratorio para reparación y prueba de los módulos electrónicos
+        Contamos con diversos escaners para las diferentes marcas y los diferentes sistemas, tanto de inyección,
+         confort, sistemas de frenado y diagnósticoi de airbags, garantizando así que los trabajos se completen
+         en forma profesional y sin retrasar al cliente.
       </p>
     </div>
     <div className="staff">

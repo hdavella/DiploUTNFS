@@ -1,6 +1,6 @@
 /*Nosotros*/
 .historia p{
-    font-size: 12px;
+    font-size: 15px;
 }
 .personas{
     display: flex;
@@ -35,5 +35,5 @@
 }
 .persona p{
     color: #777;
-    font-size: 10px;
+    font-size: 15px;
 }
