@@ -2,18 +2,16 @@ import React from 'react';
 
 const HomePage = (props) => {
     return (
-        
-
         <main className="holder">
             <div className="imgcentro"><img src="img/logo.jpg" width="350" alt="chip" /></div>
             <div className="columnas">
                 <section className="bienvenidos">
                     <h2>Bienvenidos</h2>
                     <p>
-                        Somos una empreza especializada en reparación y reprogramación de modulos electrónicos del automotor
+                        Somos una empresa especializada en reparación y reprogramación de modulos electrónicos del automotor
                     </p>
                     <p>
-                        Realizamos banqueo de módulos del automotor para verificar el correcto funcionamiento ante una repración o ante falla
+                        Realizamos banqueo de módulos del automotor para verificar el correcto funcionamiento ante una repración o ante fallas
                     </p>
                 </section>
                 <section className="testimonios">

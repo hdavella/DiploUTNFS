@@ -51,26 +51,6 @@ const NosotrosPage = (props) => {
             Nam, veritatis odio praesentium recusandae nostrum aperiam numquam.
           </p>
         </div>
-
-        <div className="persona">
-          <img src="img/nosotros/nosotros4.jpg" alt="Sandra Mastrpietro"/>
-          <h5>Sandra Mastrpietro</h5>
-          <h6>Gerente de Marketing</h6>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            A maiores beatae corrupti unde, aliquam aut voluptate culpa numquam quia vitae porro illum.
-            Nam, veritatis odio praesentium recusandae nostrum aperiam numquam.
-          </p>
-        </div>
-
-        <div className="persona">
-          <img src="img/nosotros/nosotros5.jpg" alt="Luciano Figuero"/>
-          <h5>Luciano Figuero</h5>
-          <h6>Gerente de Logística</h6>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            A maiores beatae corrupti unde, aliquam aut voluptate culpa numquam quia vitae porro illum.
-            Nam, veritatis odio praesentium recusandae nostrum aperiam numquam.
-          </p>
-        </div>
       </div>
     </div>
   </main>
